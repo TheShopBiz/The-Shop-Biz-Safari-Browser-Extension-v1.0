@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+   <head>
+  <script type="text/javascript" charset="utf-8" src="jquery-1.7.min.js"></script>
+  <style type="text/css">
+		body {
+			color: #333;
+			font-family: tahoma;
+			font-size: 10px;
+			background: #F7F7F7;
+		}
+ 
+		h1 {
+			text-align: center;;
+			font-size: 12px;
+			color: #990000;
+		}
+ 
+		#container {
+			outline: 1px solid #AAA;
+			padding: 4px;
+			background: #FFF;
+			height: 350px;
+			overflow-y: auto;
+ 
+		 } 
+	    .entry {
+	    	padding-top: 6px;
+	    }
+ 
+	    .link {
+			cursor: hand; 
+			cursor: pointer;
+			color: #0099CC;
+	    }
+	    .link:hover {
+			color: blue;
+	    }
+ 
+	    .time {
+	    	padding-right: 4px;
+	    }
+  </style>
+	<script type="text/javascript" charset="utf-8">
+			function addLink(link) {
+				$("#start").after('<div class="entry"><span class="time">'+getDateTime()+'</span><span class="link" onclick=\'openLink("'+link+'")\'>'+getShortString(link,34)+'</span></div>');
+			}
+ 
+			function getShortString( str, limit ) {
+				if (str.length > limit) {
+				 return str.substring(0,limit)+"...";
+				} else {
+					return str;
+				}
+ 
+			}
+			function openLink(link) {
+					safari.application.activeBrowserWindow.openTab().url=link;
+			}
+ 
+			function getDateTime() {
+				var currentdate = new Date(); 
+				var datetime =  ('0' +currentdate.getDate()).slice(-2) + "/"
+				            + ('0' +(currentdate.getMonth()+1)).slice(-2)  + "/" 
+				            + currentdate.getFullYear() + " "  
+				            + ('0' +currentdate.getHours()).slice(-2) + ":"  
+				            + ('0' +currentdate.getMinutes()).slice(-2);
+				return datetime;
+			}
+ 
+	</script>
+   </head>
+   <h1>TheShop Biz</h1>
+   <body>
+   	This portal is specially designed for small grocery shops, which find difficult to attract or hold customers in the lean period of the day. It is a fact that a small grocery of provision store in a locality or a housing complex is meant to serve 200 to 300 families in the locality. It will be wrong to even consider that they shall have clients from outside locality. Therefore, a shopkeeper needs to focus on those 200 to 300 families in his locality and build focus his marketing strategies according to his vicinity.<br><br><br>
+<b>Create Your Store Now at:</b><br>
+http://theshop.biz/login/register.php<br>
+<b>Login to an Existing Store:</b><br>
+http://theshop.biz/login/
+<br>
+<b>Read More About Us</b><br>
+http://theshop.biz/about.html<br>
+<br>
+<b>Main Website</b><br>
+http://theshop.biz/<br>
+<br><br>
+<b>Copyright Reserved</b><br>
+@TheShop.biz 
+
+
+   </body>
+</html>
